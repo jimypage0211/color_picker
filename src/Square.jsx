@@ -1,10 +1,12 @@
 import React from 'react'
 
 
-const Square = (squareText) => {    
+const Square = ({squareText}) => {    
   return (
-    <div className='square'>
-        <p>{squareText}</p>
+    <div className='square' style={{
+      backgroundColor: squareText
+    }}>
+        <p>{squareText === "" ? "Empty Value": squareText}</p>
     </div>
   )
 }
